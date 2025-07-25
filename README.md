@@ -32,32 +32,44 @@ This is a cross-platform **Todo Task Management Mobile App** built using **React
 
 ### 🧱 Architecture Diagram
 
-+-----------------------------+
-|         User Interface      |
-|  (React Native Components)  |
-+-----------------------------+
-              |
-              v
-+-----------------------------+
-|        ViewModel Layer      |
-| Handles state, business logic|
-|  - useState / Redux / Zustand|
-+-----------------------------+
-              |
-              v
-+-----------------------------+
-|       Service Layer          |
-| - TaskService (CRUD Ops)     |
-| - AuthService (Firebase)     |
-| - CrashService (Crashlytics) |
-+-----------------------------+
-              |
-              v
-+-----------------------------+
-|       External Services      |
-|  - Firebase Authentication   |
-|  - Firebase Crashlytics      |
-+-----------------------------+
+[ 👤 User ]
+     |
+     v
++--------------------------+
+|      UI Layer            |
+|  (React Native Views)    |
+|--------------------------|
+| - Login Screen           |
+| - Task List / Filters    |
+| - Add/Edit Task Form     |
++--------------------------+
+     |
+     v
++--------------------------+
+|    ViewModel Layer       |
+|--------------------------|
+| - Handles business logic |
+| - Manages task state     |
+| - Filters, sorting, etc. |
++--------------------------+
+     |
+     v
++-------------------------------+
+|         Service Layer         |
+|-------------------------------|
+| - AuthService (Google Auth)   |
+| - TaskService (Local CRUD)    |
+| - CrashService (Crashlytics)  |
++-------------------------------+
+     |
+     v
++--------------------------------------+
+|         External Services            |
+|--------------------------------------|
+| - Firebase Auth (Google Sign-In)     |
+| - Firebase Crashlytics               |
++--------------------------------------+
+
 
 
 ---
