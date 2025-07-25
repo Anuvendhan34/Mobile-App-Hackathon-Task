@@ -32,7 +32,33 @@ This is a cross-platform **Todo Task Management Mobile App** built using **React
 
 ### 🧱 Architecture Diagram
 
-![Architecture Diagram](assets/architecture.png)
++-----------------------------+
+|         User Interface      |
+|  (React Native Components)  |
++-----------------------------+
+              |
+              v
++-----------------------------+
+|        ViewModel Layer      |
+| Handles state, business logic|
+|  - useState / Redux / Zustand|
++-----------------------------+
+              |
+              v
++-----------------------------+
+|       Service Layer          |
+| - TaskService (CRUD Ops)     |
+| - AuthService (Firebase)     |
+| - CrashService (Crashlytics) |
++-----------------------------+
+              |
+              v
++-----------------------------+
+|       External Services      |
+|  - Firebase Authentication   |
+|  - Firebase Crashlytics      |
++-----------------------------+
+
 
 ---
 
